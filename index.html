@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Metabolicamente - Informação e conscientização sobre a Síndrome Metabólica.">
+    <title>Metabolicamente</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="stylesheet" href="assets/vendor/css/bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body data-spy="scroll" data-target=".mb-nav" data-offset="100">
+
+<!-- Preloader -->
+<div class="pre-loader" id="mb-preloader">
+    <div class="mb-ekg-container">
+        <svg class="mb-ekg-svg" viewBox="0 0 600 200">
+            <path class="mb-ekg-path-bg" d="M0,100 L150,100 L170,40 L210,160 L240,100 L300,100 L320,80 L340,120 L360,100 L450,100 L470,20 L510,180 L540,100 L600,100" stroke="#f1f5f9" stroke-width="2" fill="none" />
+            <path class="mb-ekg-path" d="M0,100 L150,100 L170,40 L210,160 L240,100 L300,100 L320,80 L340,120 L360,100 L450,100 L470,20 L510,180 L540,100 L600,100" />
+            <circle class="mb-ekg-dot" r="6" cx="0" cy="100">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M0,100 L150,100 L170,40 L210,160 L240,100 L300,100 L320,80 L340,120 L360,100 L450,100 L470,20 L510,180 L540,100 L600,100" />
+            </circle>
+        </svg>
+    </div>
+    <div class="mb-loader-text">Carregando...</div>
+</div>
+
+<script>
+    setTimeout(function() {
+        var loader = document.getElementById('mb-preloader');
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(function() { loader.style.display = 'none'; }, 600);
+        }
+    }, 3500);
+</script>
+
+<!-- Navigation -->
+<header class="mb-header">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top mb-nav-floating">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/img/logo.png" alt="Metabolicamente" style="max-height: 50px;">
+            </a>
+            <div class="collapse navbar-collapse" id="mbNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sinais">Sinais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prevencao">Prevenção</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Interativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apoio">Apoio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="mb-hero min-vh-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-hero-content">
+                <span class="mb-eyebrow">Consciência & Saúde</span>
+                <p class="mb-hero-subtitle">A síndrome metabólica é mais comum do que você imagina.</p>
+                <h1 class="mb-hero-title">1 a cada 4 pessoas possui, não sabe identificar e não tem o tratamento adequado.</h1>
+                <div class="d-flex gap-3 mt-5">
+                    <a href="#sinais" class="mb-btn-primary">Descobrir Sinais <i class="fas fa-arrow-right ml-2"></i></a>
+                    <a href="#oque-e" class="mb-btn-outline ml-3">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-hero-overlay"></div>
+</section>
+
+<!-- Section 1: Definition -->
+<section id="oque-e" class="mb-section bg-light">
+    <div class="container">
+        <div class="row mb-5 pb-5 border-bottom align-items-center">
+            <div class="col-lg-5 mb-reveal">
+                <span class="mb-eyebrow">O que é a SM</span>
+                <h2 class="mb-section-title">Um conjunto de fatores silenciosos.</h2>
+            </div>
+            <div class="col-lg-7 mb-reveal delay-200">
+                <p class="lead font-weight-normal text-muted">A Síndrome Metabólica (SM) é caracterizada como um conjunto de fatores manifestados em um indivíduo que aumentam as chances de riscos cardiovasculares e endócrinos.</p>
+                <p class="mt-4">O mecanismo central da SM é a resistência à insulina, uma condição em que o hormônio não consegue fazer a glicose entrar nas células adequadamente, elevando os níveis de glicose e insulina no sangue.</p>
+            </div>
+        </div>
+
+        <div class="row pt-5 align-items-center">
+            <div class="col-lg-6 mb-reveal">
+                <span class="mb-eyebrow">Panorama Brasileiro</span>
+                <h2 class="mb-section-title">Alerta Epidemiológico</h2>
+                <p class="lead mb-5">A condição atinge 38,4% da população adulta brasileira, significando que quase 4 em cada 10 adultos apresentam ao menos três dos critérios diagnósticos da síndrome.</p>
+                
+                <div class="row">
+                    <div class="col-6 mb-4 delay-100">
+                        <h3 class="text-primary h1 font-weight-bold mb-0">41.8%</h3>
+                        <p class="small text-uppercase tracking-wider">Mulheres</p>
+                    </div>
+                    <div class="col-6 mb-4 delay-200">
+                        <h3 class="text-primary h1 font-weight-bold mb-0">47.5%</h3>
+                        <p class="small text-uppercase tracking-wider">Baixa Escolaridade</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-reveal delay-300">
+                <div class="mb-bezel-outer">
+                    <div class="mb-bezel-inner">
+                        <h4 class="font-weight-bold">Impacto das Desigualdades</h4>
+                        <p>A prevalência é maior em mulheres (41,8%) do que em homens (34,6%), sendo mais grave em mulheres pretas, pardas ou de baixa renda na periferia. Além disso, a baixa escolaridade está diretamente ligada ao aumento do risco (47,5% de prevalência).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Diagnosis -->
+<section id="sinais" class="mb-section">
+    <div class="container">
+        <div class="text-center mb-5 pb-5 mb-reveal">
+            <span class="mb-eyebrow">Análise Técnica</span>
+            <h2 class="mb-section-title">Sinais, Diagnóstico e Riscos</h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-reveal delay-100">
+                <div class="mb-card-flip">
+                    <div class="mb-card-inner">
+                        <div class="mb-card-front">
+                            <i class="fas fa-exclamation-triangle text-primary"></i>
+                            <h4 class="font-weight-bold">Sintomas</h4>
+                            <p class="text-muted">É comum que os indivíduos não tenham sintomas claros...</p>
+                        </div>
+                        <div class="mb-card-back">
+                            <p>É comum que os indivíduos portadores não tenham sintomas claros, o que reduz a percepção de urgência do paciente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4 mb-reveal delay-200">
+                <div class="mb-card-flip">
+                    <div class="mb-card-inner">
+                        <div class="mb-card-front">
+                            <i class="fas fa-microscope text-primary"></i>
+                            <h4 class="font-weight-bold">Diagnóstico</h4>
+                            <p class="text-muted">Como costuma ser silenciosa, o diagnóstico é laboratorial...</p>
+                        </div>
+                        <div class="mb-card-back">
+                            <p>Utiliza exames como perfil lipídico, glicemia de jejum, hemoglobina glicada e teste oral de intolerância à glicose. No exame físico, avaliam-se a pressão arterial e a circunferência abdominal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4 mb-reveal delay-100">
+                <div class="mb-card-flip">
+                    <div class="mb-card-inner">
+                        <div class="mb-card-front">
+                            <i class="fas fa-dna text-primary"></i>
+                            <h4 class="font-weight-bold">Causas</h4>
+                            <p class="text-muted">Genética, sedentarismo e excesso de peso...</p>
+                        </div>
+                        <div class="mb-card-back">
+                            <p>Genética, sedentarismo e excesso de peso (principalmente gordura abdominal). O avanço da idade também é um preditor principal, saltando para 66,1% em idosos acima de 60 anos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4 mb-reveal delay-200">
+                <div class="mb-card-flip">
+                    <div class="mb-card-inner">
+                        <div class="mb-card-front">
+                            <i class="fas fa-heartbeat text-primary"></i>
+                            <h4 class="font-weight-bold">Riscos Associados</h4>
+                            <p class="text-muted">A SM aumenta a mortalidade geral e cardiovascular...</p>
+                        </div>
+                        <div class="mb-card-back">
+                            <p>A SM aumenta a mortalidade geral em cerca de 1,5 vezes e a cardiovascular em cerca de 2,5 vezes. Ligada a diabetes tipo 2, infarto, AVE, Alzheimer, câncer e cirrose.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Prevention -->
+<section id="prevencao" class="mb-section bg-light">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-reveal">
+                <span class="mb-eyebrow">Qualidade de Vida</span>
+                <h2 class="mb-section-title">Prevenção e Tratamento</h2>
+            </div>
+            <div class="col-lg-6 mb-reveal delay-200">
+                <div class="mb-bezel-outer">
+                    <div class="mb-bezel-inner">
+                        <h5 class="font-weight-bold">Estilo de Vida</h5>
+                        <p class="text-muted">Alimentação equilibrada e pelo menos 30 minutos diários de atividade física leve a moderada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5 pt-5">
+            <div class="col-12 text-center mb-5 mb-reveal">
+                <h3 class="font-weight-bold">Práticas Integrativas (PICS)</h3>
+                <p class="lead">O SUS oferece terapias gratuitas que ajudam no controle holístico.</p>
+            </div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-100"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><h5>Tai Chi Chuan</h5><p class="small">Reduz peso, circunferência abdominal e melhora a glicemia.</p></div></div></div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-200"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><h5>Ioga</h5><p class="small">Reduz colesterol total, LDL e triglicerídeos, além de elevar o HDL.</p></div></div></div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-300"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><h5>Fitoterapia Chinesa</h5><p class="small">Uso de plantas medicinais no manejo eficiente da síndrome.</p></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Quiz -->
+<section id="quiz" class="mb-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center mb-reveal">
+                <span class="mb-eyebrow">Espaço Interativo</span>
+                <h2 class="mb-section-title">Mitos e Verdades</h2>
+                
+                <div id="quiz-container" class="mx-auto text-left">
+                    <div class="progress mb-5" style="height: 8px;"><div id="quiz-progress" class="progress-bar" style="width: 0%;"></div></div>
+                    
+                    <div id="question-area" class="text-center py-4">
+                        <h3 id="question-text" class="mb-5 font-weight-bold px-4">Carregando pergunta...</h3>
+                        <div class="d-flex justify-content-center gap-4">
+                            <button onclick="checkAnswer('verdade')" class="mb-btn-primary px-5">Verdade</button>
+                            <button onclick="checkAnswer('mito')" class="mb-btn-mito px-5 ml-4">Mito</button>
+                        </div>
+                    </div>
+                    
+                    <div id="feedback-area" class="text-center d-none py-4">
+                        <h4 id="feedback-text" class="font-weight-bold mb-3"></h4>
+                        <p id="explanation-text" class="lead text-muted mb-4"></p>
+                        <button onclick="nextQuestion()" class="btn btn-dark rounded-pill px-5 py-2">Próxima Pergunta <i class="fas fa-chevron-right ml-2"></i></button>
+                    </div>
+                    
+                    <div id="result-area" class="text-center d-none py-5">
+                        <h2 class="font-weight-bold mb-4">Quiz Finalizado!</h2>
+                        <p id="final-score" class="lead mb-4"></p>
+                        <button onclick="restartQuiz()" class="mb-btn-primary">Tentar Novamente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Support -->
+<section id="apoio" class="mb-section bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-reveal">
+                <span class="mb-eyebrow">Rede de Apoio DF</span>
+                <h2 class="mb-section-title">Onde Recorrer</h2>
+                <p class="lead mb-4">Pacientes contam com o Centro Especializado em Diabetes, Obesidade e Hipertensão Arterial (CEDOH).</p>
+                <div class="mb-bezel-outer mb-4"><div class="mb-bezel-inner">
+                    <h6><i class="fas fa-map-marker-alt text-primary mr-2"></i> Localização</h6>
+                    <p class="small mb-0">Asa Norte (EQN 208/408), Brasília - DF.</p>
+                </div></div>
+                <div class="mb-bezel-outer"><div class="mb-bezel-inner">
+                    <h6><i class="fas fa-info-circle text-primary mr-2"></i> Acesso</h6>
+                    <p class="small mb-0">Busque primeiro a Unidade Básica de Saúde (UBS) de referência.</p>
+                </div></div>
+            </div>
+            <div class="col-lg-7 mb-reveal delay-300">
+                <div class="mb-bezel-outer mb-map-container" style="padding: 0.5rem; height: 500px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.8008627293834!2d-47.880584600000006!3d-15.761670399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b61e6a8a919%3A0xeee8f97e63efb4fd!2sCEDOH!5e0!3m2!1spt-BR!2sbr!4v1780710366977!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; border-radius: 1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Testimonials -->
+<section id="relatos" class="mb-section">
+    <div class="container">
+        <div class="text-center mb-5 pb-5 mb-reveal">
+            <span class="mb-eyebrow">Voz de quem convive</span>
+            <h2 class="mb-section-title">Relatos de Portadores</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-reveal delay-100"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><p class="font-italic text-muted">"Depoimento em breve..."</p><strong>Pessoa 1</strong></div></div></div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-200"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><p class="font-italic text-muted">"Depoimento em breve..."</p><strong>Pessoa 2</strong></div></div></div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-300"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><p class="font-italic text-muted">"Depoimento em breve..."</p><strong>Pessoa 3</strong></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Team -->
+<section id="equipe" class="mb-section bg-dark text-white">
+    <div class="container">
+        <div class="text-center mb-5 pb-5 mb-reveal">
+            <span class="mb-eyebrow" style="background: rgba(255,255,255,0.1); color: #fff;">Autoria Acadêmica</span>
+            <h2 class="mb-section-title text-white">Quem Somos</h2>
+            <p class="text-muted" style="max-width: 700px; margin: 0 auto;">Grupo 3 do Departamento de Enfermagem da Faculdade de Saúde da UnB, sob orientação de Ana Beatriz Duarte Viana.</p>
+        </div>
+        
+        <div class="team-section-carousel owl-carousel owl-themes mb-reveal delay-200">
+            <div class="item"><div class="text-center"><img src="assets/img/ana-beatriz.jpg" alt="Ana Beatriz" class="mb-4 shadow"><h5 class="text-white">Ana Beatriz Duarte Viana</h5><p class="small text-muted">Docente Orientadora</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/isabela-alves.jpg" alt="Isabela Alves" class="mb-4 shadow"><h5 class="text-white">Isabela Alves Barbosa</h5><p class="small text-muted">Acadêmica de Enfermagem</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/isabela-borges.jpg" alt="Isabela Borges" class="mb-4 shadow"><h5 class="text-white">Isabela Borges Alimandro</h5><p class="small text-muted">Acadêmica de Enfermagem</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/hellen.jpg" alt="Hellen Lucio" class="mb-4 shadow"><h5 class="text-white">Hellen Lucio Souza</h5><p class="small text-muted">Técnica e acadêmica de Enfermagem</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/jaianne.jpg" alt="Jaianne Lobato" class="mb-4 shadow"><h5 class="text-white">Jaianne Lobato Castelo Branco</h5><p class="small text-muted">Acadêmica de Enfermagem</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/jean.jpg" alt="Jean Lobato" class="mb-4 shadow"><h5 class="text-white">Jean Lobato Castelo Branco</h5><p class="small text-muted">Desenvolvedor WEB</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/maria-eduarda-silva.jpg" alt="Maria Eduarda Silva" class="mb-4 shadow"><h5 class="text-white">Maria Eduarda de Jesus Silva</h5><p class="small text-muted">Acadêmica de Enfermagem</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/maria-eduarda-rodrigues.jpg" alt="Maria Eduarda Rodrigues" class="mb-4 shadow"><h5 class="text-white">Maria Eduarda Furtado Rodrigues</h5><p class="small text-muted">Acadêmica de Enfermagem</p></div></div>
+            <div class="item"><div class="text-center"><img src="assets/img/mariana.jpg" alt="Mariana Marinho" class="mb-4 shadow"><h5 class="text-white">Mariana Marinho Silva</h5><p class="small text-muted">Acadêmica de Enfermagem</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark text-white border-top border-white-10">
+    <div class="container text-center">
+        <p class="small text-muted mb-0">&copy; 2026 Metabolicamente. Grupo 3 - Enfermagem UnB.</p>
+        <p class="small text-muted mt-2">Website desenvolvido por: <a href="https://www.instagram.com/jlobato95" target="_blank" class="text-white font-weight-bold">Jean Lobato</a></p>
+    </div>
+</footer>
+
+<script src="assets/vendor/js/bundle.min.js"></script>
+<script src="assets/vendor/js/jquery.appear.js"></script>
+<script src="assets/vendor/js/jquery.fancybox.min.js"></script>
+<script src="assets/vendor/js/owl.carousel.min.js"></script>
+<script src="assets/vendor/js/swiper.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
