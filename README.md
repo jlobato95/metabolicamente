@@ -47,4 +47,4 @@ Este conteúdo foi desenvolvido pelo **Grupo 3** do Departamento de Enfermagem d
 Basta abrir o arquivo `index.html` em qualquer navegador moderno ou hospedar os arquivos em um servidor web de sua preferência.
 
 ---
-Desenvolvido com ❤️ para a promoção da saúde.
+Projeto acadêmico - UnB 2026.

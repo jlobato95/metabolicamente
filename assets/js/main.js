@@ -102,7 +102,7 @@ function restartQuiz() {
     loadQuestion();
 }
 
-// Acessibilidade: Controle de Tamanho da Fonte
+// Controle de Tamanho da Fonte
 let currentFontScale = parseInt(localStorage.getItem('mb-font-scale')) || 100;
 document.documentElement.style.setProperty('--mb-font-scale', `${currentFontScale}%`);
 
@@ -110,26 +110,20 @@ function changeFontSize(delta) {
     currentFontScale = Math.min(Math.max(currentFontScale + delta, 80), 150);
     document.documentElement.style.setProperty('--mb-font-scale', `${currentFontScale}%`);
     localStorage.setItem('mb-font-scale', currentFontScale);
-    
-    // Feedback visual opcional para o usuário
-    console.log(`Fonte ajustada para: ${currentFontScale}%`);
 }
 
-// Acessibilidade: Suporte a teclado para Flip Cards
+// Suporte a teclado para Flip Cards
 function initKeyboardAccessibility() {
     document.querySelectorAll('.mb-card-flip').forEach(card => {
         card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                const inner = card.querySelector('.mb-card-inner');
-                // Alterna o flip via classe se necessário, mas o :focus-within já resolve a visualização.
-                // Aqui apenas garantimos que o foco permaneça ou o comportamento seja consistente.
             }
         });
     });
 }
 
-// Função para esconder o preloader
+// Preloader
 function hidePreloader() {
     const preloader = document.getElementById('mb-preloader');
     if (preloader) {
@@ -141,7 +135,7 @@ function hidePreloader() {
     }
 }
 
-// Função para observar elementos e animar ao scroll (Reveal)
+// Revelar elementos ao scroll
 function initRevealAnimation() {
     const observerOptions = {
         threshold: 0.15
@@ -170,20 +164,20 @@ function handleNavbarScroll() {
 
 // Inicializações ao carregar o conteúdo
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Esconder preloader com tempo mínimo de 2.5s para visualização da animação
+    // Esconder preloader com tempo mínimo de 2.5s para visualização da animação
     setTimeout(() => {
         hidePreloader();
     }, 2500);
     
-    // 2. Inicializar Quiz
+    // Inicializar Quiz
     loadQuestion();
     initKeyboardAccessibility();
 
-    // 3. Scroll Events
+    // Scroll Events
     window.addEventListener('scroll', handleNavbarScroll);
     initRevealAnimation();
     
-    // 4. Inicialização do Owl Carousel da Equipe
+    // Inicialização do Owl Carousel da Equipe
     if (typeof jQuery !== 'undefined' && $('.team-section-carousel').length) {
         $('.team-section-carousel').owlCarousel({
             loop: true,
