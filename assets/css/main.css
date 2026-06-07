@@ -6,16 +6,90 @@
     --mb-bg-main: #ffffff;
     --mb-bg-alt: #f8fafc;
     --mb-text-main: #1e293b;
-    --mb-text-muted: #64748b;
+    --mb-text-muted: #475569; /* Slightly darker for better contrast (was #64748b) */
     --mb-radius-lg: 2rem;
     --mb-radius-md: 1.5rem;
     --mb-transition: all 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+    --mb-font-scale: 100%;
+}
+
+html {
+    font-size: var(--mb-font-scale);
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--mb-text-main);
     background: var(--mb-bg-main);
+    line-height: 1.6;
+}
+
+/* Accessibility: Focus Styles */
+:focus-visible {
+    outline: 3px solid var(--mb-accent-light);
+    outline-offset: 4px;
+}
+
+/* Accessibility: Skip Link */
+.mb-skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--mb-accent);
+    color: white !important;
+    padding: 1rem;
+    z-index: 100000;
+    transition: top 0.3s;
+}
+
+.mb-skip-link:focus {
+    top: 0;
+}
+
+/* Accessibility: Font Size Widget */
+.mb-accessibility-widget {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mb-acc-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--mb-accent);
+    transition: var(--mb-transition);
+}
+
+.mb-acc-btn:hover {
+    background: var(--mb-accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+.mb-acc-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--mb-accent);
+    background: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 a, a:hover, a:focus, a:active {
@@ -91,6 +165,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.04em;
     line-height: 1.1;
     color: var(--mb-accent);
+    text-wrap: balance;
 }
 
 .mb-section-title {
@@ -238,8 +313,13 @@ h1, h2, h3, h4, h5, h6 {
     transform-style: preserve-3d;
 }
 
-.mb-card-flip:hover .mb-card-inner {
+.mb-card-flip:hover .mb-card-inner, 
+.mb-card-flip:focus-within .mb-card-inner {
     transform: rotateY(180deg);
+}
+
+.mb-card-flip:focus {
+    outline: none;
 }
 
 .mb-card-front, .mb-card-back {

@@ -102,6 +102,33 @@ function restartQuiz() {
     loadQuestion();
 }
 
+// Acessibilidade: Controle de Tamanho da Fonte
+let currentFontScale = parseInt(localStorage.getItem('mb-font-scale')) || 100;
+document.documentElement.style.setProperty('--mb-font-scale', `${currentFontScale}%`);
+
+function changeFontSize(delta) {
+    currentFontScale = Math.min(Math.max(currentFontScale + delta, 80), 150);
+    document.documentElement.style.setProperty('--mb-font-scale', `${currentFontScale}%`);
+    localStorage.setItem('mb-font-scale', currentFontScale);
+    
+    // Feedback visual opcional para o usuário
+    console.log(`Fonte ajustada para: ${currentFontScale}%`);
+}
+
+// Acessibilidade: Suporte a teclado para Flip Cards
+function initKeyboardAccessibility() {
+    document.querySelectorAll('.mb-card-flip').forEach(card => {
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const inner = card.querySelector('.mb-card-inner');
+                // Alterna o flip via classe se necessário, mas o :focus-within já resolve a visualização.
+                // Aqui apenas garantimos que o foco permaneça ou o comportamento seja consistente.
+            }
+        });
+    });
+}
+
 // Função para esconder o preloader
 function hidePreloader() {
     const preloader = document.getElementById('mb-preloader');
@@ -150,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 2. Inicializar Quiz
     loadQuestion();
+    initKeyboardAccessibility();
 
     // 3. Scroll Events
     window.addEventListener('scroll', handleNavbarScroll);
