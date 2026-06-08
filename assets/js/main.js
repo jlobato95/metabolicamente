@@ -18,6 +18,26 @@ const quizData = [
         question: "A SM também aumenta o risco de desenvolver câncer e Alzheimer.",
         answer: "verdade",
         explanation: "Além do risco cardíaco e diabetes, a SM aumenta as chances de problemas como Alzheimer, apneia do sono, câncer de reto, entre outros."
+    },
+    {
+        question: "A resistência à insulina, excesso de peso e sedentarismo são fatores de risco para a Síndrome Metabólica.",
+        answer: "verdade",
+        explanation: "Estes são os principais fatores que aumentam as chances de desenvolvimento da síndrome."
+    },
+    {
+        question: "A SM aumenta drasticamente o risco de doenças cardiovasculares, diabetes e até câncer.",
+        answer: "verdade",
+        explanation: "A condição afeta todo o organismo e eleva o risco dessas e outras comorbidades."
+    },
+    {
+        question: "A prática de Tai Chi Chuan e Ioga não traz benefícios comprovados para a Síndrome Metabólica, sendo apenas recursos para relaxamento mental.",
+        answer: "mito",
+        explanation: "O Tai Chi Chuan reduz peso, circunferência da cintura e melhora a glicemia. Já o ioga reduz colesterol total, LDL e triglicerídeos, além de melhorar a sensibilidade à insulina."
+    },
+    {
+        question: "A baixa adesão ao tratamento da Síndrome Metabólica está relacionada apenas à falta de força de vontade do paciente.",
+        answer: "mito",
+        explanation: "Existem múltiplas barreiras: complexidade do tratamento, efeitos colaterais, natureza assintomática e carência de educação em saúde preventiva."
     }
 ];
 
@@ -102,6 +122,61 @@ function restartQuiz() {
     loadQuestion();
 }
 
+function getSections() {
+    return Array.from(document.querySelectorAll('section[id], main > div[id]'));
+}
+
+// Custom Gliding Scroll Function
+function glideTo(targetY) {
+    const startY = window.pageYOffset;
+    const distance = targetY - startY;
+    const duration = 1000; // Slightly faster but still smooth
+    let start = null;
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const time = Math.min(progress / duration, 1);
+        
+        // Easing function: easeOutQuart (snappier start, very smooth landing)
+        const easing = 1 - Math.pow(1 - time, 4);
+        
+        window.scrollTo(0, startY + distance * easing);
+        
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+    
+    window.requestAnimationFrame(step);
+}
+
+function scrollToNextSection() {
+    const sections = getSections();
+    const currentScroll = window.pageYOffset;
+    // Search for a section that is at least 150px below the current view to ensure a substantial move
+    const next = sections.find(section => section.offsetTop > currentScroll + 150);
+    
+    if (next) {
+        glideTo(next.offsetTop);
+    } else {
+        glideTo(document.body.scrollHeight);
+    }
+}
+
+function scrollToPrevSection() {
+    const sections = getSections();
+    const currentScroll = window.pageYOffset;
+    // Search for a section that is at least 150px above the current view
+    const prev = sections.slice().reverse().find(section => section.offsetTop < currentScroll - 150);
+    
+    if (prev) {
+        glideTo(prev.offsetTop);
+    } else {
+        glideTo(0);
+    }
+}
+
 // Controle de Tamanho da Fonte
 let currentFontScale = parseInt(localStorage.getItem('mb-font-scale')) || 100;
 document.documentElement.style.setProperty('--mb-font-scale', `${currentFontScale}%`);
@@ -159,6 +234,25 @@ function handleNavbarScroll() {
         nav.classList.add('mb-nav-scrolled');
     } else {
         nav.classList.remove('mb-nav-scrolled');
+    }
+}
+
+function toggleTestimonial(btn) {
+    const textContainer = btn.previousElementSibling;
+    const isCollapsed = textContainer.classList.contains('collapsed');
+    
+    if (isCollapsed) {
+        textContainer.classList.remove('collapsed');
+        textContainer.style.maxHeight = textContainer.scrollHeight + "px";
+        btn.innerHTML = 'Ver Menos <i class="fas fa-chevron-up"></i>';
+    } else {
+        textContainer.classList.add('collapsed');
+        textContainer.style.maxHeight = "150px";
+        btn.innerHTML = 'Ver Mais <i class="fas fa-chevron-down"></i>';
+        
+        // Scroll back to card if needed
+        const card = btn.closest('.mb-bezel-outer');
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
 

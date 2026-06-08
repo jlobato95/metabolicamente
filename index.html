@@ -34,6 +34,13 @@
     <button onclick="changeFontSize(-10)" class="mb-acc-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A-</button>
 </div>
 
+<!-- Scroll Control -->
+<div class="mb-scroll-widget" role="region" aria-label="Controles de navegação vertical">
+    <span class="mb-scroll-label">Navegar</span>
+    <button onclick="scrollToPrevSection()" class="mb-scroll-btn" aria-label="Rolar para seção anterior" title="Seção anterior"><i class="fas fa-chevron-up"></i></button>
+    <button onclick="scrollToNextSection()" class="mb-scroll-btn" aria-label="Rolar para próxima seção" title="Próxima seção"><i class="fas fa-chevron-down"></i></button>
+</div>
+
 <!-- Preloader -->
 <div class="pre-loader" id="mb-preloader">
     <div class="mb-ekg-container">
@@ -73,6 +80,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sinais">Sinais</a></li>
                     <li class="nav-item"><a class="nav-link" href="#prevencao">Prevenção</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enfermagem">Enfermagem</a></li>
                     <li class="nav-item"><a class="nav-link" href="#quiz">Interativo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#apoio">Apoio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
@@ -217,21 +225,43 @@
 <section id="prevencao" class="mb-section bg-light">
     <div class="container">
         <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-reveal">
+            <div class="col-lg-12 mb-reveal text-center mb-5">
                 <span class="mb-eyebrow">Qualidade de Vida</span>
                 <h2 class="mb-section-title">Prevenção e Tratamento</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">A prevenção da Síndrome Metabólica envolve a adoção de hábitos saudáveis e o controle de fatores de risco.</p>
             </div>
-            <div class="col-lg-6 mb-reveal delay-200">
-                <div class="mb-bezel-outer">
-                    <div class="mb-bezel-inner">
-                        <h5 class="font-weight-bold">Estilo de Vida</h5>
-                        <p class="text-muted">Alimentação equilibrada e pelo menos 30 minutos diários de atividade física leve a moderada.</p>
+        </div>
+
+        <!-- Sub-section: Estilo de Vida -->
+        <div class="row mb-5">
+            <div class="col-lg-4 mb-4 mb-reveal delay-100">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <h5 class="font-weight-bold"><i class="fas fa-apple-alt text-primary mr-2"></i> Estilo de Vida</h5>
+                        <p class="text-muted small mb-0">A prevenção da Síndrome Metabólica envolve a adoção de hábitos saudáveis. Uma alimentação equilibrada, com maior consumo de frutas, verduras, legumes e alimentos naturais, e menor consumo de alimentos ultraprocessados, açúcares e gorduras, ajuda a controlar o peso e a saúde do organismo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-200">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <h5 class="font-weight-bold"><i class="fas fa-running text-primary mr-2"></i> Exercício Físico</h5>
+                        <p class="text-muted small mb-0">A prática regular de atividade física, por pelo menos 30 min diariamente, como caminhadas, corridas ou dança, também é importante para manter o peso adequado e reduzir o risco de doenças.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-300">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <h5 class="font-weight-bold"><i class="fas fa-heart text-primary mr-2"></i> Mudança de Hábitos</h5>
+                        <p class="text-muted small mb-0">Além disso, evitar o tabagismo, moderar o consumo de álcool e realizar acompanhamento de saúde contribuem para a prevenção e o controle da síndrome.</p>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="row mt-5 pt-5">
+        <!-- Sub-section: PICS -->
+        <div class="row mt-5 pt-4">
             <div class="col-12 text-center mb-5 mb-reveal">
                 <h3 class="font-weight-bold">Práticas Integrativas (PICS)</h3>
                 <p class="lead">O SUS oferece terapias gratuitas que ajudam no controle holístico.</p>
@@ -239,6 +269,82 @@
             <div class="col-lg-4 mb-4 mb-reveal delay-100"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><h5>Tai Chi Chuan</h5><p class="small">Reduz peso, circunferência abdominal e melhora a glicemia.</p></div></div></div>
             <div class="col-lg-4 mb-4 mb-reveal delay-200"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><h5>Ioga</h5><p class="small">Reduz colesterol total, LDL e triglicerídeos, além de elevar o HDL.</p></div></div></div>
             <div class="col-lg-4 mb-4 mb-reveal delay-300"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><h5>Fitoterapia Chinesa</h5><p class="small">Uso de plantas medicinais no manejo eficiente da síndrome.</p></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3.5: Nursing Role -->
+<section id="enfermagem" class="mb-section">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-12 mb-reveal text-center mb-5">
+                <span class="mb-eyebrow">Papel do Profissional</span>
+                <h2 class="mb-section-title">O que a Enfermagem pode fazer na Síndrome Metabólica?</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 850px;">A atuação da enfermagem vai muito além da simples realização de exames clínicos. O enfermeiro desempenha um papel central no acompanhamento físico, emocional e social.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Feature 1: Educação em Saúde -->
+            <div class="col-lg-4 mb-4 mb-reveal delay-100">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-medkit text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-bold">Educação em Saúde</h5>
+                        <p class="text-muted small mb-0">O profissional atua como um educador, comunicando informações relevantes e verídicas sobre a síndrome para facilitar o entendimento do paciente.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 2: Cuidado Individualizado -->
+            <div class="col-lg-4 mb-4 mb-reveal delay-200">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-stethoscope text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-bold">Cuidado Individualizado</h5>
+                        <p class="text-muted small mb-0">O tratamento não é padronizado. A enfermagem adapta os cuidados respeitando as crenças, os desejos e a condição socioeconômica de cada indivíduo.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 3: Promoção da Autonomia -->
+            <div class="col-lg-4 mb-4 mb-reveal delay-300">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-users text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-bold">Promoção da Autonomia</h5>
+                        <p class="text-muted small mb-0">Por meio de orientações objetivas, o enfermeiro capacita o cliente e o envolve no processo, garantindo autonomia no autocontrole diário da sua saúde.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 4: Monitoramento Clínico -->
+            <div class="col-lg-6 mb-4 mb-reveal delay-100">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-clock text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-bold">Monitoramento Clínico e Prevenção</h5>
+                        <p class="text-muted small mb-0">Realização de triagens e avaliações periódicas constantes, o que permite o acompanhamento de parâmetros essenciais e a identificação precoce de riscos.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature 5: Mudança de Hábitos -->
+            <div class="col-lg-6 mb-4 mb-reveal delay-200">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner h-100">
+                        <div class="mb-4">
+                            <i class="fas fa-heart text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="font-weight-bold">Incentivo à Mudança de Hábitos</h5>
+                        <p class="text-muted small mb-0">Apoio contínuo para a mudança no estilo de vida e integração com as PICS, atuando sempre em conjunto com uma equipe multiprofissional.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -313,9 +419,43 @@
             <h2 class="mb-section-title">Relatos de Portadores</h2>
         </div>
         <div class="row">
-            <div class="col-lg-4 mb-4 mb-reveal delay-100"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><p class="font-italic text-muted">"Depoimento em breve..."</p><strong>Pessoa 1</strong></div></div></div>
-            <div class="col-lg-4 mb-4 mb-reveal delay-200"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><p class="font-italic text-muted">"Depoimento em breve..."</p><strong>Pessoa 2</strong></div></div></div>
-            <div class="col-lg-4 mb-4 mb-reveal delay-300"><div class="mb-bezel-outer"><div class="mb-bezel-inner text-center"><p class="font-italic text-muted">"Depoimento em breve..."</p><strong>Pessoa 3</strong></div></div></div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-100">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner text-center h-100">
+                        <i class="fas fa-quote-left mb-testimonial-quote"></i>
+                        <p class="font-italic text-muted">"Não quero correr o risco de iniciar uma doença crônica. Existem pessoas que são gordinhas saudáveis, mas minha genética não permitiu. Entendi que, se o mental não estiver bem, você não consegue realizar a parte física com excelência para reverter a síndrome."</p>
+                        <div class="mt-auto pt-3">
+                            <strong class="text-primary">Fani Pacheco</strong>
+                            <p class="small text-muted mb-0 mt-1" style="font-size: 0.75rem; opacity: 0.8;">MARIANO, Tatiana. Fani Pacheco precisou emagrecer após se lançar plus size: 'Síndrome metabólica'. Purepeople, [S. l.], s.d. Disponível em: https://www.purepeople.com.br/noticia/fani-pacheco-explica-emagrecimento-apos-se-lancar-como-plus-size-poderia-ficar-diabetica_a230919/1. Acesso em: 7 jun. 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-200">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner text-center h-100">
+                        <i class="fas fa-quote-left mb-testimonial-quote"></i>
+                        <div class="mb-testimonial-text collapsed">
+                            <p class="font-italic text-muted">"O momento do diagnóstico foi muito confuso para mim, eu tinha apenas 16 anos e fui diagnosticada por uma médica ginecologista que não me acolheu e julgou minha situação naquele momento. Nesta época, eu levava um estilo de vida saudável, com alimentação equilibrada e fazia exercício físico pelo menos 5x na semana, por isso não entendia como os exames estavam dizendo que eu tinha resistência a insulina. Muitos anos depois, fui diagnosticada com Síndrome dos Ovários Policísticos, assim, podendo entender aquilo que não havia entendido anos atrás. O maior desafio de conviver com a SM é manter hábitos saudáveis de vida, pois com a rotina corrida, nem sempre é possível fazer exercícios e manter uma boa alimentação."</p>
+                        </div>
+                        <button class="mb-btn-read-more" onclick="toggleTestimonial(this)">Ver Mais <i class="fas fa-chevron-down"></i></button>
+                        <div class="mt-auto pt-3">
+                            <strong class="text-primary">J.L, 23 anos</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-reveal delay-300">
+                <div class="mb-bezel-outer h-100">
+                    <div class="mb-bezel-inner text-center h-100">
+                        <i class="fas fa-quote-left mb-testimonial-quote"></i>
+                        <p class="font-italic text-muted">"Não dei muita importância, porque fui diagnosticada aos 13 anos. Maior vitória é estar me exercitando todos os dias e desafio tem sido emagrecer e voltar a menstruar"</p>
+                        <div class="mt-auto pt-3">
+                            <strong class="text-primary">J.L.C, 32 anos</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -358,9 +498,6 @@
 <script src="assets/vendor/js/owl.carousel.min.js"></script>
 <script src="assets/vendor/js/swiper.min.js"></script>
 <script src="assets/js/main.js"></script>
-
-</body>
-</html>s"></script>
 
 </body>
 </html>

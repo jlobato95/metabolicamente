@@ -92,6 +92,50 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* Scroll Widget */
+.mb-scroll-widget {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mb-scroll-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--mb-accent);
+    transition: var(--mb-transition);
+}
+
+.mb-scroll-btn:hover {
+    background: var(--mb-accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+.mb-scroll-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--mb-accent);
+    background: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none !important;
 }
@@ -289,6 +333,55 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.mb-testimonial-quote {
+    font-size: 2rem;
+    color: var(--mb-accent);
+    opacity: 0.1;
+    margin-bottom: -1rem;
+}
+
+/* Expandable Testimonial */
+.mb-testimonial-text {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.mb-testimonial-text.collapsed {
+    max-height: 150px; /* Adjust based on desired collapsed height */
+}
+
+.mb-testimonial-text.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(transparent, #ffffff);
+    pointer-events: none;
+}
+
+.mb-btn-read-more {
+    background: none;
+    border: none;
+    color: var(--mb-accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--mb-transition);
+}
+
+.mb-btn-read-more:hover {
+    color: var(--mb-accent-light);
+    gap: 0.75rem;
 }
 
 .mb-bezel-outer:hover {
